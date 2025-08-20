@@ -1,0 +1,300 @@
+/* ========== HORIZONTAL LAYOUT EXTENSION ========== */
+body {
+  overflow-x: auto;
+  min-width: 100vw;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f9fafb;
+}
+
+.page-container {
+  min-width: 1800px;
+  padding: 2rem 0;
+}
+
+/* ========== BIDS CONTAINER ========== */
+.bids-container {
+  max-width: none;
+  width: auto;
+  margin: 60px auto;
+  padding: 0 40px;
+  display: inline-block;
+}
+
+/* ========== ELEGANT TITLE ========== */
+.bids-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 4rem;
+  position: relative;
+  letter-spacing: -0.025em;
+}
+
+.bids-title::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 5px;
+  background: linear-gradient(90deg, #4f46e5, #f59e0b);
+  border-radius: 3px;
+}
+
+/* ========== PREMIUM CARD DESIGN ========== */
+.bid-card {
+  display: flex;
+  background: #ffffff;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  padding: 3rem;
+  margin-bottom: 3rem;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
+  width: 900px; /* Extended card width */
+}
+
+.bid-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 100%;
+  background: linear-gradient(to bottom, #4f46e5, #f59e0b);
+}
+
+.bid-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15);
+}
+
+/* ========== PRODUCT IMAGE ========== */
+.bid-image-container {
+  width: 400px; /* Wider image area */
+  height: 100%;
+  margin-right: 60px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.bid-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.bid-card:hover .bid-image {
+  transform: scale(1.05);
+}
+
+/* ========== CARD CONTENT ========== */
+.bid-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ========== DETAILS TABLE ========== */
+.details-table {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 24px 40px;
+  margin-bottom: 30px;
+}
+
+.detail-row {
+  display: contents;
+}
+
+/* ========== STATUS DISPLAY ========== */
+.bid-status-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  grid-column: 1 / -1;
+  margin-bottom: 1rem;
+}
+
+.bid-status-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.bid-status {
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bid-status.live {
+  background: #10b981;
+  color: white;
+}
+
+.bid-status.expired {
+  background: #d84758;
+  color: white;
+}
+
+.bid-status.upcoming {
+  background: #d2893b;
+  color: white;
+}
+
+/* ========== ROOM NUMBER ========== */
+.room-number {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: #f3f4f6;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  color: #1f2937;
+  font-size: 1.1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  margin-bottom: 0.75rem;
+}
+
+.room-number::before {
+  content: '🏨';
+  margin-right: 0.75rem;
+}
+
+/* ========== BUYER INFO ========== */
+.buyer-info-container {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.buyer-name, .buyer-number {
+  display: flex;
+  align-items: center;
+  font-size: 1.05rem;
+  color: #1f2937;
+  background: #f3f4f6;
+  padding: 0.6rem 1rem;
+  border-radius: 0.75rem;
+}
+
+.buyer-name::before {
+  content: '👤';
+  margin-right: 0.75rem;
+}
+
+.buyer-number::before {
+  content: '📱';
+  margin-right: 0.75rem;
+}
+
+/* ========== ACTION BUTTONS ========== */
+.bid-actions {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.bid-btn {
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+}
+
+.secondary-btn {
+  background: transparent;
+  color: #4f46e5;
+  border: 2px solid #e0e7ff;
+}
+
+.bid-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.4);
+}
+
+/* ========== SCROLL INDICATOR ========== */
+body::after {
+  
+  display: block;
+  text-align: center;
+  padding: 10px 20px;
+  color: #6b7280;
+  font-size: 0.9rem;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.9);
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 100;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.7; }
+  50% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+/* ========== RESPONSIVE ADJUSTMENTS ========== */
+@media (max-width: 992px) {
+  .page-container {
+    min-width: 1400px;
+  }
+  
+  .bid-card {
+    width: 1300px;
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .bid-image-container {
+    width: 100%;
+    height: 300px;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bids-title {
+    font-size: 2.25rem;
+  }
+  
+  .bid-actions {
+    flex-direction: column;
+  }
+}

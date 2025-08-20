@@ -1,0 +1,262 @@
+/* ========== MY BIDS CONTAINER ========== */
+.bids-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 1.25rem;
+  background-color: #f8f9fa;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+body, html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.bids-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #2d3748;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.bids-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #6a4c93 0%, #8a5a44 100%);
+  border-radius: 2px;
+}
+
+/* ========== BID CARD ========== */
+.bid-card {
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.25rem;
+  margin-bottom: 25px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.bid-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #6a4c93 0%, #8a5a44 100%);
+}
+
+.bid-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-color: #cbd5e0;
+}
+
+.bid-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 25px;
+  border: 1px solid #edf2f7;
+  transition: transform 0.3s ease;
+}
+
+.bid-card:hover .bid-image {
+  transform: scale(1.03);
+}
+
+.bid-details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ========== ROW ========== */
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.row span {
+  flex: 1;
+  min-width: 0;
+  padding: 0 10px;
+  font-size: 0.95rem;
+  color: #4a5568;
+  overflow-wrap: break-word;
+}
+
+.row strong {
+  color: #2d3748;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+/* ========== STATUS BADGES ========== */
+.status {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 10;
+}
+
+.status.won {
+  background-color: #38a169;
+  color: white;
+}
+
+.status.lost {
+  background-color: #e53e3e;
+  color: white;
+}
+
+.status.live {
+  background-color: #4299e1;
+  color: white;
+}
+
+.status.onhold {
+  background-color: #4299e1;
+  color: white;
+}
+
+/* ========== NO BIDS MESSAGE ========== */
+.no-bids-message {
+  text-align: center;
+  margin: 100px auto;
+  max-width: 500px;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.no-bids-message h3 {
+  font-size: 1.5rem;
+  color: #4a5568;
+  margin-bottom: 15px;
+}
+
+.no-bids-message p {
+  color: #718096;
+  margin-bottom: 20px;
+}
+
+.no-bids-message button {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #6a4c93 0%, #8a5a44 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.no-bids-message button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(106, 76, 147, 0.3);
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+  .bid-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bid-image {
+    width: 100%;
+    height: 200px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .row span {
+    padding: 5px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .bids-container {
+    padding: 15px;
+  }
+
+  .bids-title {
+    font-size: 1.8rem;
+  }
+
+  .bid-card {
+    padding: 15px;
+  }
+}
+.win-banner {
+  background-color: #d1fae5;
+  color: #065f46;
+  padding: 10px;
+  margin-top: 12px;
+  font-weight: bold;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.lose-banner {
+  background-color: #fee2e2;
+  color: #991b1b;
+  padding: 10px;
+  margin-top: 12px;
+  font-weight: bold;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.status-won {
+  color: green;
+  font-weight: bold;
+}
+
+.status-lost {
+  color: red;
+  font-weight: bold;
+}
+
+.status-live {
+  color: orange;
+  font-weight: bold;
+}
+
+.status-onhold {
+  color: #555;
+  font-weight: bold;
+}

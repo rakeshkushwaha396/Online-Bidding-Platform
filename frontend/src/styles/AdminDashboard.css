@@ -1,0 +1,190 @@
+/* Layout */
+.admin-dashboard {
+  padding: 24px 36px;
+  background-color: #fdfbf9;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: #2c2c2c;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.dashboard-header h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #2c2c2c;
+}
+
+.dashboard-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* Buttons */
+.logout-btn,
+.verified-btn {
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Button Colors */
+.logout-btn {
+  background-color: #e76f51;
+  color: white;
+}
+.logout-btn:hover {
+  background-color: #c85a3d;
+}
+
+.verified-btn {
+  background-color: #588157;
+  color: white;
+}
+.verified-btn:hover {
+  background-color: #436443;
+}
+
+/* Cards Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+/* Card Styling */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h4 {
+  font-size: 1.2rem;
+  color: #2e2e2e;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Document Images */
+.doc-images {
+  display: flex;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.doc-images img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* Approve/Reject Buttons */
+.actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.approve-btn {
+  background-color: #2a9d8f;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.approve-btn:hover {
+  background-color: #21867a;
+}
+
+.reject-btn {
+  background-color: #b83b5e;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.reject-btn:hover {
+  background-color: #992b4c;
+}
+
+/* Empty State */
+.no-users {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #7b7b7b;
+  margin-top: 2rem;
+}
+
+.block-btn {
+  background-color: #9f3a38; /* Dark reddish-brown */
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.block-btn:hover {
+  background-color: #7c2d2c;
+}
+
+.unblock-btn {
+  background-color: #3b7f41; /* Muted forest green */
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.unblock-btn:hover {
+  background-color: #2f6634;
+}
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .dashboard-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

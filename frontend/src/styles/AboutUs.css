@@ -1,0 +1,188 @@
+/* AboutUs.css - Horizontal Team Layout */
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.about-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #000000;
+  text-align: center;
+  font-weight: bold;
+}
+
+.team-divider {
+  border: none;
+  height: 1px;
+  background-color: #d3d3d3;
+  margin: 30px auto;
+  width: 100px;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 0 20px;
+  margin-bottom: 50px;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+}
+
+.member-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 2px solid #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.member-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.member-role {
+  font-size: 0.95rem;
+  color: #555555;
+  font-weight: normal;
+  text-align: center;
+}
+
+/* Project Description Styles */
+.project-description {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  margin-top: 40px;
+}
+
+.description-title {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.description-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.features-section, .tech-stack, .mission-section {
+  margin-bottom: 30px;
+}
+
+.features-title, .tech-title, .mission-title {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 8px;
+}
+
+.features-list, .mission-list {
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+.features-list ul {
+  padding-left: 20px;
+  margin-top: 8px;
+  list-style-type: circle;
+}
+
+.tech-stack p {
+  margin-bottom: 8px;
+  padding-left: 15px;
+}
+
+.mission-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.mission-list li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.mission-list li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 15px;
+  height: 15px;
+  background-color: #5e35b1;
+  border-radius: 50%;
+}
+
+.contact-note {
+  font-style: italic;
+  color: #666;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .team-grid {
+    gap: 30px;
+  }
+  
+  .team-member {
+    width: 150px;
+  }
+  
+  .member-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .project-description {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  .team-member {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .description-title {
+    font-size: 1.3rem;
+  }
+
+  .features-title, .tech-title, .mission-title {
+    font-size: 1.1rem;
+  }
+}

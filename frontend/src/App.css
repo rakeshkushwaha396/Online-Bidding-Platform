@@ -1,0 +1,16 @@
+/* Global fix */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Layout fix */
+.dashboard-container {
+  overflow-x: hidden;
+}
+
+/* Prevent large elements from overflowing */
+* {
+  box-sizing: border-box;
+  max-width: 100vw;
+}
